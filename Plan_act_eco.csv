@@ -1,0 +1,34 @@
+﻿241,Análisis Matemático I,6,–
+242,Economía,4,–
+243,Sociología,4,–
+244,Metodología de las Ciencias Sociales,4,–
+245,Álgebra,4,–
+246,Historia Económica y Social General,4,–
+247,Teoría Contable,6,–
+248,Estadística I,6,241
+249,Historia Económica y Social Argentina,4,242-244-246
+261,Teoría Política y Derecho Público,6,–
+262,Macroeconomía I,6,241-242
+284,Análisis Matemático II,6,241-245
+273,Instituciones del Derecho Privado,4,–
+276,Cálculo Financiero,4,248
+279,Administración Financiera,6,262-276
+283,Macroeconomía II,6,262-288
+285,Estadística II,6,248-284
+286,Microeconomía II,6,284-290
+287,Geografía Económica,2,249
+288,Matemática para Economistas,6,284
+289,Epistemología de la Economía,2,244-262-290
+290,Microeconomía I (para Economistas),6,242-284
+552,"Dinero, Crédito y Bancos",6,283-286-288
+751,Estadística Actuarial,4,285
+752,Análisis Numérico,4,288
+753,Biometría Actuarial,6,276-751-752
+754,Teoría Actuarial de los Seguros Personales,4,753
+755,Teoría Actuarial de los Seguros Patrimoniales,4,276-751-752
+756,"Teoría Actuarial de los Fondos y Planes de Jubilaciones, Pensiones y Salud",6,754
+757,Teoría de Equilibrio Actuarial,4,754-755
+758,Bases Actuariales de las Inversiones y Financiaciones,4,276-751
+999,(*) ELECTIVA u (**) OPTATIVA,0,–
+998,(*) ELECTIVA u (**) OPTATIVA,0,–
+759,Seminario de Integración y Aplicación,0,754-755-756-757-758

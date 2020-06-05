@@ -1,0 +1,33 @@
+﻿241,Análisis Matemático I,6,–
+242,Economía,4,–
+243,Sociología,4,–
+244,Metodología de las Ciencias Sociales,4,–
+245,Álgebra,4,–
+246,Historia Económica y Social General,4,–
+247,Teoría Contable,6,–
+248,Estadística I,6,241
+249,Historia Económica y Social Argentina,4,242-244-246
+250,Microeconomía I,4,241-242
+251,Instituciones de Derecho Público,4,–
+252,Administración General,4,–
+273,Instituciones de Derecho Privado,4,1359
+274,Sistemas Administrativos,4,252
+275,Tecnología de la Información,6,274
+276,Cálculo Financiero,4,248
+278,Macroeconomía y Política Económica,6,–
+279,Administración Financiera,6,276
+351,Sistemas Contables,6,247
+353,Sistemas de Costos,4,247
+354,Derecho del Trabajo y la Seguridad Social,4,251-1359
+355,Auditoría,6,362-1352
+356,Teoría y Técnica Impositiva I,6,251-1352
+357,Teoría y Técnica Impositiva II,6,356
+362,Gestión y Costos para Contadores,6,353
+1330,Contabilidad Social y Ambiental,2,1352
+1352,Contabilidad Financiera,6,351-353
+1359,Derecho Económico,4,–
+1360,"Derecho Crediticio, Bursátil e Insolvencia",4,273-354
+1374,Contabilidad Gubernamental y Control de Gestión,4,278-1352
+999,(*) ELECTIVA u (**) OPTATIVA,4,–
+1358,Taller de Actuación Profesional Judicial,4,355-1360
+1361,Taller de Práctica Profesional en Organizaciones,6,273-279-355-1330

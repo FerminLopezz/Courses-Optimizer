@@ -1,0 +1,33 @@
+﻿241,Análisis Matemático I,6,–
+242,Economía,4,–
+243,Sociología,4,–
+244,Metodología de las Ciencias Sociales,4,–
+245,Álgebra,4,–
+246,Historia Económica y Social General,4,–
+247,Teoría Contable,6,–
+248,Estadística I,6,241
+249,Historia Económica y Social Argentina,4,242-244-246
+261,Teoría Política y Derecho Público,6,–
+262,Macroeconomía I,6,241-242
+284,Análisis Matemático II,6,241-245
+283,Macroeconomía II,6,262-288
+285,Estadística II,6,248-284
+286,Microeconomía II,6,288-290
+287,Geografía Económica,2,249
+288,Matemática para Economistas,6,284
+289,Epistemología de la Economía,2,244-262-290
+290,Microeconomía I (para Economistas),6,242-284
+551,Econometría,6,285-288
+552,"Dinero, Crédito y Bancos",6,283-286-288
+553,Historia del Pensamiento Económico,4,243-244-262-290
+554,Crecimiento Económico,4,283-286-288
+555,Organización Industrial,4,286
+556,Finanzas Públicas,4,261-290
+557,Estructura Social Argentina,2,243-249-561
+558,Economía Internacional,4,283-287-290
+559,Desarrollo Económico,4,557-560
+560,Estructura Económica Argentina,2,287-561
+561,Cuentas Nacionales,6,247-262 
+998,(*) ELECTIVA u (**) OPTATIVA,0,–
+999,(*) ELECTIVA u (**) OPTATIVA,0,–
+562,Seminario de Integración y Aplicación,0,286-289-551-558

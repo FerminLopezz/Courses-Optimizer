@@ -1,0 +1,31 @@
+﻿241,Análisis Matemático I,6,–
+242,Economía,4,–
+243,Sociología,4,–
+244,Metodología de las Ciencias Sociales,4,–
+245,Álgebra,4,–
+246,Historia Económica y Social General,4,–
+247,Teoría Contable,6,–
+248,Estadística I,6,241
+249,Historia Económica y Social Argentina,4,242-244-246
+250,Microeconomía I,4,241-242
+251,Instituciones de Derecho Público,4,–
+252,Administración General,4,–
+273,Instituciones de Derecho Privado,4,–
+274,Sistemas Administrativos,4,252
+275,Tecnología de la Información,6,274
+276,Cálculo Financiero,4,248
+277,Gestión y Costos,6,247
+278,Macroeconomía y Política Económica,6,250
+279,Administración Financiera,6,252-276
+451,Estadística para Administradores,4,248-274-275
+452,Sociología de la Organización,4,243-244-252
+453,Administración de la Producción,6,252-276
+454,Administración del Personal,6,273-452
+455,Régimen Tributario,6,273-277-278
+456,Comercialización,6,277-279-453-454
+457,Teoría de la Decisión,6,277-451
+458,Planeamiento a Largo Plazo,4,457
+459,Dirección General,6,279-453-454-456-457
+999,(*) ELECTIVA u (**) OPTATIVA,0,–
+998,(*) ELECTIVA u (**) OPTATIVA,0,–
+460,Seminario de Integración y Aplicación,0,456-457
