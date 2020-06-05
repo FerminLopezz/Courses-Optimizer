@@ -1,13 +1,17 @@
 import pandas as pd
-import numpy as np
+import os
+import sys
 from classes import Course
+
 
 temporal_depths = []
 courses_list = []
 pending = True
 
-def plan_charging ():
-    plan = pd.read_csv('Plan_act_admin.csv', names = ["Id","Name", "VH", "Correlatives"])
+def plan_charging (n_career):
+    path_to_plan =  career_selection(n_career)
+    print(path_to_plan)
+    plan = pd.read_csv(path_to_plan, names = ["Id","Name", "VH", "Correlatives"])
     
     # Formatting the id
     plan['Id'] = plan['Id'].astype(str)
@@ -17,6 +21,29 @@ def plan_charging ():
     print('The plan has been formatted successfully')
 
     return plan
+
+def career_selection(n_career):
+    
+    path_to_plan = 'data'
+    
+    if n_career == 1:
+        path_to_plan = path_to_plan + '\Plan_act_admin.csv'
+    elif n_career == 2:
+        path_to_plan = path_to_plan + '\Plan_act_eco.csv'
+    elif n_career == 3:
+        path_to_plan = path_to_plan + '\Plan_admin.csv'
+    elif n_career == 4:
+        path_to_plan = path_to_plan + '\Plan_conta.csv'
+    elif n_career == 5:
+        path_to_plan = path_to_plan + '\Plan_eco.csv'
+    elif n_career == 6:
+        path_to_plan = path_to_plan + '\Plan_sist.csv'
+    else:
+        print('Wrong data, please retry')
+        print('***Your answer should be a number between 1 and 6\n')
+        sys.exit()
+
+    return path_to_plan
 
 def course_charging (plan):
     
@@ -69,7 +96,7 @@ def update_depths():
         counter += 1
 
     print('The depths has been updated succesfully.')
-#---------------------------------------------
+
 def eligibility_check():
     for i in range(len(courses_list)):
         if len(courses_list[i].correlatives2) == 0:
@@ -149,8 +176,9 @@ def check_pending_courses(pending):
             pending = True
     return pending
 
-def main(n_courses, cbc_exception = True):
-    plan = plan_charging()
+def main(n_courses, n_career ,cbc_exception = True):
+    
+    plan = plan_charging(n_career)
     course_charging(plan)
     update_depths()
 
@@ -166,24 +194,46 @@ def main(n_courses, cbc_exception = True):
         update_eligibility(cbc_exception)
 
         print('\n')
-        print('Ferpes Exception')
+        # print('Ferpes Exception')
         
-        lista = [['250',0],['247',0],['248',0],['249',0],['251',0],['252',0],['273',0],['274',0],['276',0],['284',0]]
+        # lista = [['250',0],['247',0],['248',0],['249',0],['251',0],['252',0],['273',0],['274',0],['276',0],['284',0]]
 
-        for i in lista:
-            index = find_course_index(i[0])
-            courses_list[index].assigned = True
-            print(courses_list[index].name)
+        # for i in lista:
+        #     index = find_course_index(i[0])
+        #     courses_list[index].assigned = True
+        #     print(courses_list[index].name)
         
-        update_eligibility(lista)
+        # update_eligibility(lista)
         print('-----------------------------------------------------------------------')
 
     selection_2(pending, n_courses)
 
+def init():
+    print('1. Actuario Administración \n2. Actuario Economía \n3. Administración\n4. Contador\n5. Economía\n6. Sistemas')
+    career = input('Choose your career (number): ')
+    c_quantity = input('How many courses are you going to take?: ')
+
+    try:
+        int_career = int(career)
+    except:
+        print('Wrong data, please retry')
+        print('***Your answer should be a number between 1 and 6\n')
+        sys.exit()
+    
+    try:
+        int_c_quantiy = int(c_quantity)
+    except:
+        print('Wrong data, please retry')
+        print('***Your answer should be a number\n')
+        sys.exit()
+
+    return int_c_quantiy, int_career
+
+
 
 if __name__ == "__main__":
-    os = input('Que cantidad de materias vas a cursar?: ')
-    main(n_courses=int(os))
+    c_quantity, career = init()
+    main(n_courses=c_quantity, n_career=career)
 
     
 
