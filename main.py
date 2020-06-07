@@ -95,7 +95,14 @@ def update_depths():
         up_3(temporal_depths)
         counter += 1
 
+    last_course_correction(courses_list)
+
     print('The depths has been updated succesfully.')
+
+def last_course_correction(courses_list):
+    for i in courses_list:
+        if 'Seminario' in i.name:
+            i.depth = 0
 
 def eligibility_check():
     for i in range(len(courses_list)):
@@ -216,20 +223,18 @@ def init():
     try:
         int_career = int(career)
     except:
-        print('Wrong data, please retry')
+        print('***Wrong data, please retry')
         print('***Your answer should be a number between 1 and 6\n')
         sys.exit()
     
     try:
         int_c_quantiy = int(c_quantity)
     except:
-        print('Wrong data, please retry')
+        print('***Wrong data, please retry')
         print('***Your answer should be a number\n')
         sys.exit()
 
     return int_c_quantiy, int_career
-
-
 
 if __name__ == "__main__":
     c_quantity, career = init()

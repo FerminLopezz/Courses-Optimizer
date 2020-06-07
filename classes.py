@@ -20,4 +20,4 @@ class Course:
             self.eligibility = False
         
         if '*' in self.name:
-            self.depth = 0
+            self.depth = 1
