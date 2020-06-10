@@ -1,0 +1,73 @@
+******OPTIMAL COURSES******
+
+CBC Exception: True
+Análisis Matemático I
+Economía
+Sociología
+Metodología de las Ciencias Sociales
+Álgebra
+Historia Económica y Social General
+--------------------------------------
+Iteración: 1
+Estadística I
+Análisis Matemático II
+Microeconomía I
+Administración General
+
+Carga horaria total: 20
+--------------------------------------
+
+Iteración: 2
+Estadística II
+Matemática para Economistas
+Cálculo Financiero
+Teoría Contable
+
+Carga horaria total: 22
+--------------------------------------
+
+Iteración: 3
+Estadística Actuarial
+Análisis Numérico
+Sistemas Administrativos
+Macroeconomía y Política Económica
+
+Carga horaria total: 18
+--------------------------------------
+
+Iteración: 4
+Biometría Actuarial
+Teoría Actuarial de los Seguros Patrimoniales
+Bases Actuariales de las Inversiones y Financiaciones
+Historia Económica y Social Argentina
+
+Carga horaria total: 18
+--------------------------------------
+
+Iteración: 5
+Teoría Actuarial de los Seguros Personales
+Instituciones de Derecho Público
+Instituciones del Derecho Privado
+Tecnología de la Información
+
+Carga horaria total: 18
+--------------------------------------
+
+Iteración: 6
+Teoría Actuarial de los Fondos y Planes de Jubilaciones, Pensiones y Salud
+Teoría de Equilibrio Actuarial
+Gestión y Costos
+Administración Financiera
+
+Carga horaria total: 22
+--------------------------------------
+
+Iteración: 7
+Dinero, Crédito y Bancos
+(*) ELECTIVA u (**) OPTATIVA
+(*) ELECTIVA u (**) OPTATIVA
+Seminario de Integración y Aplicación
+
+Carga horaria total: 6
+--------------------------------------
+

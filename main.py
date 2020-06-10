@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 import sys
 from classes import Course
 
@@ -10,7 +9,6 @@ pending = True
 
 def plan_charging (n_career):
     path_to_plan =  career_selection(n_career)
-    print(path_to_plan)
     plan = pd.read_csv(path_to_plan, names = ["Id","Name", "VH", "Correlatives"])
     
     # Formatting the id
@@ -150,6 +148,7 @@ def top_n(eligible_courses_list, n_courses):
     
 def selection(n_courses):
     eligible_courses_list = []
+    VH_total = 0
     
     for i in range(len(courses_list)):
         if courses_list[i].eligibility == True and courses_list[i].assigned == False:
@@ -161,7 +160,10 @@ def selection(n_courses):
         temp_index = 0
         temp_index = find_course_index(i[0])          
         courses_list[temp_index].assigned = True
-        print( courses_list[temp_index].name, 'Carga Horaria:', courses_list[temp_index].VH)
+        print(courses_list[temp_index].name)
+        VH_total = VH_total + courses_list[temp_index].VH
+    
+    print('\nCarga horaria total:',VH_total)  
 
     update_eligibility(selected_courses)
 
@@ -172,7 +174,7 @@ def selection_2(pending, n_courses):
             print('Iteración:', i+1)
             selection(n_courses)
             pending = check_pending_courses(pending)
-            print('------------------\n')
+            print('--------------------------------------\n')
         else:
             break
         
@@ -188,19 +190,22 @@ def main(n_courses, n_career ,cbc_exception = True):
     plan = plan_charging(n_career)
     course_charging(plan)
     update_depths()
+    
+    sys.stdout = open('result.txt', 'w', encoding='utf-8')
+
+    print('******OPTIMAL COURSES******\n')
 
     if cbc_exception == True:
-        print('\n')
-        print('CBC Exception')
+        print('CBC Exception:', cbc_exception)
     
         for i in range(0,6):
             courses_list[i].assigned = True
-            print(courses_list[i].name, i)
+            print(courses_list[i].name)
     
         cbc_exception = [['241', 0], ['242', 0], ['243', 0], ['244', 0], ['245', 0], ['246',0]]
         update_eligibility(cbc_exception)
 
-        print('\n')
+        #print('\n')
         # print('Ferpes Exception')
         
         # lista = [['250',0],['247',0],['248',0],['249',0],['251',0],['252',0],['273',0],['274',0],['276',0],['284',0]]
@@ -211,9 +216,11 @@ def main(n_courses, n_career ,cbc_exception = True):
         #     print(courses_list[index].name)
         
         # update_eligibility(lista)
-        print('-----------------------------------------------------------------------')
+        print('--------------------------------------')
 
     selection_2(pending, n_courses)
+
+    sys.stdout.close()
 
 def init():
     print('1. Actuario Administración \n2. Actuario Economía \n3. Administración\n4. Contador\n5. Economía\n6. Sistemas')
@@ -236,11 +243,6 @@ def init():
 
     return int_c_quantiy, int_career
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     c_quantity, career = init()
     main(n_courses=c_quantity, n_career=career)
-
-    
-
-
-    
